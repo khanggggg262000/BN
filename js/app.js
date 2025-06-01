@@ -130,37 +130,6 @@ function createHeart(initial = false, initialY = -50) {
     animateHeart();
 }
 
-function createRose(initial = false, initialY = -50) {
-    const rose = document.createElement("div");
-    rose.className = "rose";
-    rose.innerText = "🌺";
-
-    const startX = Math.random() * window.innerWidth;
-    const zLayer = Math.random() * 400 - 200;
-    rose.style.left = startX + "px";
-    rose.style.top = initial ? (Math.random() * window.innerHeight) + "px" : "-50px";
-    rose.style.transform = `translateZ(${zLayer}px) rotate(${Math.random() * 360}deg)`;
-
-    scene.appendChild(rose);
-    setTimeout(() => {
-        rose.remove();
-    }, (isMobile ? 3000 : 4000));
-
-    let posY = initial ? parseFloat(rose.style.top) : -50;
-    const speed = Math.random() * 1.5 + (isMobile ? 2.00 : 1);
-
-    function animateRose() {
-        posY += speed;
-        rose.style.top = posY + "px";
-
-        if (posY > window.innerHeight + 50) {
-            rose.remove();
-        } else {
-            requestAnimationFrame(animateRose);
-        }
-    }
-    animateRose();
-}
 
 // Điều chỉnh số lượng tùy theo thiết bị
 const initialTextCount = isMobile ? 10 : 30;
