@@ -3,12 +3,7 @@ const texts = [
     "Chúc bé 1 tháng 6 vui vẻ",
     "Anh yêu em",
     "Anh thương em",
-    "Em là số 1",
-    "An Khang thương Bé Nên nhiều",
-    "I Love You",
-    "Chúc bé 1 tháng 6 vui vẻ",
-    "Anh yêu em",
-    "Anh thương em",
+    "♥️♥️♥️",
     "Em là số 1",
     "An Khang thương Bé Nên nhiều",
 ];
@@ -55,6 +50,7 @@ updateRotation();
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 function createFallingText(initial = false) {
+    if (scene.childElementCount > 300) return; // Giới hạn tối đa 300 phần tử
     const text = document.createElement("div");
     text.className = `falling-text text-${Math.floor(Math.random() * 3) + 1}`;
     text.innerText = texts[Math.floor(Math.random() * texts.length)];
@@ -66,7 +62,7 @@ function createFallingText(initial = false) {
     text.style.transform = `translateZ(${zLayer}px)`;
 
     // Xuất hiện ở vị trí ngẫu nhiên hoặc ở trên cùng
-    const randomStart = Math.random() < 0.4; // 80% bắt đầu từ vị trí ngẫu nhiên
+    const randomStart = Math.random() < 0.8; // 80% bắt đầu từ vị trí ngẫu nhiên
     const startY = randomStart
         ? Math.random() * window.innerHeight // Ngẫu nhiên trong màn hình
         : -50; // Từ trên rơi xuống
@@ -80,7 +76,7 @@ function createFallingText(initial = false) {
 
     let posY = startY;
 
-    const speed = Math.random() * 3 + (isMobile ? 2.00 : 0.5);
+    const speed = Math.random() * 2 + (isMobile ? 2.00 : 0.5);
 
     function animate() {
         posY += speed;
@@ -161,11 +157,11 @@ function createRose(initial = false, initialY = -50) {
 }
 
 // Điều chỉnh số lượng tùy theo thiết bị
-const initialTextCount = isMobile ? 30 : 80;
+const initialTextCount = isMobile ? 10 : 30;
 const initialHeartCount = isMobile ? 3 : 10;
 const initialRoseCount = isMobile ? 2 : 5;
 
-const textInterval = isMobile ? 500 : 200;
+const textInterval = isMobile ? 100 : 40;
 const heartInterval = isMobile ? 800 : 500;
 const roseInterval = isMobile ? 1000 : 600;
 
