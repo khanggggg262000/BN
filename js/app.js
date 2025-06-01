@@ -60,7 +60,8 @@ function createFallingText(initial = false) {
     text.className = `falling-text text-${Math.floor(Math.random() * 3) + 1}`;
     text.innerText = texts[Math.floor(Math.random() * texts.length)];
 
-    const startX = Math.random() * window.innerWidth;
+    const padding = 40; // khoảng cách từ mép màn hình
+const startX = Math.random() * (window.innerWidth - 2 * padding) + padding;
     const zLayer = Math.random() * 400 - 200;
     text.style.left = startX + "px";
     text.style.fontSize = `${Math.random() * 20 + 18}px`;
