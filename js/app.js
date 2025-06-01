@@ -3,7 +3,12 @@ const texts = [
     "Chúc bé 1 tháng 6 vui vẻ",
     "Anh yêu em",
     "Anh thương em",
-    "♥️♥️♥️",
+    "Em là số 1",
+    "An Khang thương Bé Nên nhiều",
+    "I Love You",
+    "Chúc bé 1 tháng 6 vui vẻ",
+    "Anh yêu em",
+    "Anh thương em",
     "Em là số 1",
     "An Khang thương Bé Nên nhiều",
 ];
@@ -61,7 +66,7 @@ function createFallingText(initial = false) {
     text.style.transform = `translateZ(${zLayer}px)`;
 
     // Xuất hiện ở vị trí ngẫu nhiên hoặc ở trên cùng
-    const randomStart = Math.random() < 0.8; // 80% bắt đầu từ vị trí ngẫu nhiên
+    const randomStart = Math.random() < 0.4; // 80% bắt đầu từ vị trí ngẫu nhiên
     const startY = randomStart
         ? Math.random() * window.innerHeight // Ngẫu nhiên trong màn hình
         : -50; // Từ trên rơi xuống
