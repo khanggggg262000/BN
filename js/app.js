@@ -55,7 +55,6 @@ updateRotation();
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 function createFallingText(initial = false) {
-    if (scene.childElementCount > 30000) return; // Giới hạn tối đa 300 phần tử
     const text = document.createElement("div");
     text.className = `falling-text text-${Math.floor(Math.random() * 3) + 1}`;
     text.innerText = texts[Math.floor(Math.random() * texts.length)];
