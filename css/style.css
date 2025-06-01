@@ -35,32 +35,32 @@ body {
 
 .falling-text.text-1 {
     text-shadow:
-        0 0 5px #25d7fb,
-        0 0 10px #25d7fb,
-        0 0 15px #25d7fb,
-        0 0 20px #25d7fb,
-        0 0 25px #25d7fb,
-        0 0 30px #25d7fb;
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #fff,
+        0 0 25px #fff,
+        0 0 30px #fff;
 }
 
 .falling-text.text-2 {
     text-shadow:
-        0 0 5px #00ff66,
-        0 0 10px #00ff66,
-        0 0 15px #00ff66,
-        0 0 20px #00ff66,
-        0 0 25px #00ff66,
-        0 0 30px #00ff66;
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #fff,
+        0 0 25px #fff,
+        0 0 30px #fff;
 }
 
 .falling-text.text-3 {
     text-shadow:
-        0 0 5px #ff63a2,
-        0 0 10px #ff63a2,
-        0 0 15px #ff63a2,
-        0 0 20px #ff63a2,
-        0 0 25px #ff63a2,
-        0 0 30px #ff63a2;
+        0 0 5px #fff,
+        0 0 10px #fff,
+        0 0 15px #fff,
+        0 0 20px #fff,
+        0 0 25px #fff,
+        0 0 30px #fff;
 }
 
 .heart,
