@@ -8,9 +8,6 @@ const texts = [
     "An Khang thương Bé Nên nhiều",
 ];
 
-let images = [
-
-];
 
 const scene = document.getElementById("scene");
 let rotateX = 0, rotateY = 0;
@@ -98,8 +95,7 @@ function createFallingText(initial = false) {
 function createHeart(initial = false, initialY = -50) {
     const heart = document.createElement("div");
     heart.className = "heart";
-    heart.innerHTML = `<img src="${images[Math.floor(Math.random() * images.length)]}" alt="♡" />`;//"♡";
-
+    heart.innerHTML = "❤️";
     const startX = Math.random() * window.innerWidth;
     const zLayer = Math.random() * 400 - 200;
     heart.style.left = startX + "px";
@@ -160,11 +156,11 @@ function createRose(initial = false, initialY = -50) {
 }
 
 // Điều chỉnh số lượng tùy theo thiết bị
-const initialTextCount = isMobile ? 10 : 30;
+const initialTextCount = isMobile ? 30 : 80;
 const initialHeartCount = isMobile ? 3 : 10;
 const initialRoseCount = isMobile ? 2 : 5;
 
-const textInterval = isMobile ? 500 : 200;
+const textInterval = isMobile ? 200 : 80;
 const heartInterval = isMobile ? 800 : 500;
 const roseInterval = isMobile ? 1000 : 600;
 
