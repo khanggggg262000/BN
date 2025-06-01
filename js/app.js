@@ -80,7 +80,7 @@ function createFallingText(initial = false) {
 
     let posY = startY;
 
-    const speed = Math.random() * 2 + (isMobile ? 2.00 : 0.5);
+    const speed = Math.random() * 3 + (isMobile ? 2.00 : 0.5);
 
     function animate() {
         posY += speed;
