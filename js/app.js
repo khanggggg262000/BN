@@ -3,7 +3,12 @@ const texts = [
     "Chúc bé 1 tháng 6 vui vẻ",
     "Anh yêu em",
     "Anh thương em",
-    "♥️♥️♥️",
+    "Em là số 1",
+    "An Khang thương Bé Nên nhiều",
+        "I Love You",
+    "Chúc bé 1 tháng 6 vui vẻ",
+    "Anh yêu em",
+    "Anh thương em",
     "Em là số 1",
     "An Khang thương Bé Nên nhiều",
 ];
@@ -161,7 +166,7 @@ const initialTextCount = isMobile ? 10 : 30;
 const initialHeartCount = isMobile ? 3 : 10;
 const initialRoseCount = isMobile ? 2 : 5;
 
-const textInterval = isMobile ? 100 : 40;
+const textInterval = isMobile ? 200 : 80;
 const heartInterval = isMobile ? 800 : 500;
 const roseInterval = isMobile ? 1000 : 600;
 
