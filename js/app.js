@@ -160,7 +160,7 @@ const initialTextCount = isMobile ? 30 : 80;
 const initialHeartCount = isMobile ? 3 : 10;
 const initialRoseCount = isMobile ? 2 : 5;
 
-const textInterval = isMobile ? 200 : 80;
+const textInterval = isMobile ? 500 : 200;
 const heartInterval = isMobile ? 800 : 500;
 const roseInterval = isMobile ? 1000 : 600;
 
