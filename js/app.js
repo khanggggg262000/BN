@@ -5,12 +5,6 @@ const texts = [
     "Anh thương em",
     "Em là số 1",
     "An Khang thương Bé Nên nhiều",
-        "I Love You",
-    "Chúc bé 1 tháng 6 vui vẻ",
-    "Anh yêu em",
-    "Anh thương em",
-    "Em là số 1",
-    "An Khang thương Bé Nên nhiều",
 ];
 
 
@@ -55,6 +49,7 @@ updateRotation();
 const isMobile = window.matchMedia("(max-width: 768px)").matches;
 
 function createFallingText(initial = false) {
+    if (scene.childElementCount > 300) return; // Giới hạn tối đa 300 phần tử
     const text = document.createElement("div");
     text.className = `falling-text text-${Math.floor(Math.random() * 3) + 1}`;
     text.innerText = texts[Math.floor(Math.random() * texts.length)];
@@ -129,13 +124,44 @@ function createHeart(initial = false, initialY = -50) {
     animateHeart();
 }
 
+function createRose(initial = false, initialY = -50) {
+    const rose = document.createElement("div");
+    rose.className = "rose";
+    rose.innerText = "🌺";
+
+    const startX = Math.random() * window.innerWidth;
+    const zLayer = Math.random() * 400 - 200;
+    rose.style.left = startX + "px";
+    rose.style.top = initial ? (Math.random() * window.innerHeight) + "px" : "-50px";
+    rose.style.transform = `translateZ(${zLayer}px) rotate(${Math.random() * 360}deg)`;
+
+    scene.appendChild(rose);
+    setTimeout(() => {
+        rose.remove();
+    }, (isMobile ? 3000 : 4000));
+
+    let posY = initial ? parseFloat(rose.style.top) : -50;
+    const speed = Math.random() * 1.5 + (isMobile ? 2.00 : 1);
+
+    function animateRose() {
+        posY += speed;
+        rose.style.top = posY + "px";
+
+        if (posY > window.innerHeight + 50) {
+            rose.remove();
+        } else {
+            requestAnimationFrame(animateRose);
+        }
+    }
+    animateRose();
+}
 
 // Điều chỉnh số lượng tùy theo thiết bị
 const initialTextCount = isMobile ? 10 : 30;
 const initialHeartCount = isMobile ? 3 : 10;
 const initialRoseCount = isMobile ? 2 : 5;
 
-const textInterval = isMobile ? 200 : 80;
+const textInterval = isMobile ? 100 : 40;
 const heartInterval = isMobile ? 800 : 500;
 const roseInterval = isMobile ? 1000 : 600;
 
