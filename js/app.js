@@ -1,10 +1,10 @@
 const texts = [
     "I Love You",
-    "Chúc bé 1 tháng 6 vui vẻ",
+    "Chúc bé vui vẻ",
     "Anh yêu em",
     "Anh thương em",
     "Em là số 1",
-    "An Khang thương Bé Nên nhiều",
+    "Thương em nhiều",
 ];
 
 
